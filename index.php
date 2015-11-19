@@ -22,11 +22,12 @@ require_once("lista_clientes.php");
 print'<div id="container" class="container">';
 
 
-IF($_REQUEST[ordem]=='up' OR !$_REQUEST[ordem])
+IF($_REQUEST[ordem]=='up')
     { ksort($clientes);$ordem='down'; }
 ELSEIF($_REQUEST[ordem]=='down')
     { krsort($clientes); $ordem='up'; }
 
+IF(!$_REQUEST[ordem]) $ordem = "up";
 
 print "<table align='center' class='table table-bordered table-ordered table-hover'>
         <caption>LISTA DE CLIENTES</caption>
