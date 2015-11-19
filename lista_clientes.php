@@ -12,22 +12,6 @@ require_once("classes/cliente.class.php");
     $clientes[9]  = new Pessoa("9" ,"Roberto Carlos Coelho", "987.987.987-54","Av Sete de Setembro, 414","(21) 99876-5432","robertocoelho@uol.com.br");
     $clientes[10] = new Pessoa("10","Albertina Bonfim", "456.456.456-45","Rua Dois, 44","(22) 2745-5478","albertina.bonfim@gmail.com");
 
-function ordena($array,$atrib,$tipo)
-{
-    IF(!$atrib) $atrib='codigo';
-
-    FOREACH($array AS $id=>$vet)
-    {
-       $array2[$vet->get($atrib)] = $vet;
-    }
-    IF($tipo=='up')
-        ksort($array2);
-    ELSEIF($tipo=='down')
-        krsort($array2);
-
-    return $array2;
-}
-
 
 IF(isset($_REQUEST['id']))
 {
@@ -41,6 +25,7 @@ IF(isset($_REQUEST['id']))
     print "<tr><td>Endereço: </td><td>".$clientes[$id]->get("endereco")."</td></tr>";
     print "<tr><td>Telefone: </td><td>".$clientes[$id]->get("telefone")."</td></tr>";
     print "<tr><td>E-mail: </td><td>".$clientes[$id]->get("email")."</td></tr>";
+    print "<tr><td><a href='./index.php'>Voltar</a></td></tr>";
     print "</fieldset>";
 
 }
