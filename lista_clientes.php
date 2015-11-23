@@ -13,7 +13,7 @@ require_once("classes/cliente.class.php");
     $clientes[10] = new Cliente("10","Albertina Bonfim", "456.456.456-45","Rua Dois, 44","(22) 2745-5478","albertina.bonfim@gmail.com");
 
 
-IF(isset($_REQUEST['id']))
+if(isset($_REQUEST['id']))
 {
     $id = $_REQUEST['id'];
 

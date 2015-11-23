@@ -22,9 +22,9 @@ require_once("lista_clientes.php");
 print'<div id="container" class="container">';
 
 
-IF($_REQUEST[ordem]=='down')
+if($_REQUEST[ordem]=='down')
     { krsort($clientes); $ordem='up'; }
-ELSE
+else
     $ordem = "down";
 
 print "<table align='center' class='table table-bordered table-ordered table-hover'>
@@ -41,7 +41,7 @@ print "<table align='center' class='table table-bordered table-ordered table-hov
         <tbody>
       ";
 
-FOREACH($clientes as $id=>$cli)
+foreach($clientes as $id=>$cli)
     print "<tr>
              <!--td><button id='dialog-link-cliente' href='".$cli->get('codigo')."'><i id='' class='icon-user' href='$id'></i></button></td-->
              <td><a id='dialog-link-cliente' href='./lista_clientes.php?id=".$cli->get('codigo')."'><i id='' class='icon-user' href='$id'></i></a></td>
