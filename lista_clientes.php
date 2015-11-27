@@ -1,5 +1,5 @@
 <?php
-require_once("classes/cliente.class.php");
+require_once("classes/Cliente.php");
 
     $clientes[1]  = new Cliente("1" ,"João Carlos Fernandes", "123.123.123-12","Rua Cinco de Maio, 987","(21) 99876-5432","joao.calos@gmail.com");
     $clientes[2]  = new Cliente("2" ,"Marta Valéria", "333.333.333-11","Rua Cinco de Maio, 87","(21) 98589-4578","marcaval23@terra.com.br");
